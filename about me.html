@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>ABOUT THE ARTIST</h1>
@@ -15,8 +17,8 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about me.html">About me</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -24,28 +26,22 @@
         <section id="slider">
             <div class="slider">
                 <div class="slide">
-                    <img src="imagen1.jpg" alt="Fotografía de un río subterráneo">
+                    <img src="imagen1.jpg" alt="Fotografia de un rio subterraneo">
                 </div>
                 <div class="slide">
-                    <img src="imagen2.png" alt="Mock-up de una etiqueta de chocolate solei">
+                    <img src="imagen2.jpg" alt="Mock.up de una etiqueta de chocolate solei">
                 </div>
                 <div class="slide">
-                    <img src="imagen3.png" alt="Render de lata de bebida energética llamada burn out">
-                </div>
-<div class="slide">
-                    <img src="imagen4.png" alt="Mock-up de una etiqueta de chocolate solei">
+                    <img src="imagen3.jpg" alt="Render de lata de bebida energetica llamada burn out">
                 </div>
             </div>
             <button class="prev" onclick="changeSlide(-1)">❮</button>
             <button class="next" onclick="changeSlide(1)">❯</button>
         </section>
-
         <section>
-           
-
             <h2 class="titulos">Acerca de mí</h2>
             <p class="titulos">
-                Laura Sofía Arellano Renteria, mi experiencia en Diseño Gráfico y Producciones Audiovisuales me ha permitido desarrollar habilidades sólidas. Me especializo en animación en 2D y 3D, producciones publicitarias y edición de audio y video. Mis títulos como TSU en Lengua Inglesa y TSU en Diseño Digital (con énfasis en Animación) respaldan mi conocimiento. 🌟
+                Laura Sofia Arellano Renteria, mi experiencia en Diseño Gráfico y Producciones Audiovisuales me ha permitido desarrollar habilidades sólidas. Me especializo en animación en 2D y 3D, producciones publicitarias y edición de audio y video. Mis títulos como TSU en Lengua Inglesa y TSU en Diseño Digital (con énfasis en Animación) respaldan mi conocimiento. 🌟
             </p>
             <p class="titulos">
                 En resumen, soy creativa y técnica, capaz de dar vida a ideas visuales y comunicar mensajes impactantes a través de mis habilidades en diseño y producción audiovisual.
@@ -57,24 +53,26 @@
         <p>&copy; 2024 My first website</p>
     </footer>
 
-    <!-- Script para el slider -->
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideIndex = 0;
+        showSlides();
 
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
+        function showSlides() {
             let slides = document.getElementsByClassName("slide");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function changeSlide(n) {
+            slideIndex += n - 1;
+            showSlides();
         }
     </script>
 </body>
+
 </html>
