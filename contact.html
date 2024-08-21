@@ -5,19 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #121212;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #1F1B24;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #BB86FC;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #03DAC6;
+            margin: 10px 0 0 0;
+        }
+
+        /* Barra de navegación */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #2D2D2D;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #BB86FC;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #03DAC6;
+        }
+
+        /* Sección principal */
+        main {
+            padding: 40px;
+        }
+
+        h2.titulos {
+            font-size: 2rem;
+            color: #BB86FC;
+            margin-bottom: 20px;
+        }
+
+        p.titulos {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #E1E1E1;
+        }
+
+        a {
+            color: #03DAC6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #BB86FC;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1F1B24;
+            color: #BB86FC;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Contact</h1>
-        <p>Digital Designer - Illustrator - Editor</p>
+        <h1 class="animate__animated animate__heartBeat">CONTACT</h1>
+        <p>DIGITAL DESIGNER - ILLUSTRATOR - EDITOR</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about me.html">About me</a></li>
+            <li><a href="about_me.html">About me</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
